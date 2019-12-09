@@ -1,0 +1,538 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>SingleTrack</title>
+
+    <!--[if mso]>
+    <style type=”text/css”>
+    .fallback-font {
+    font-family: Arial, sans-serif;
+    }
+    </style>
+    <![endif]-->
+    <!-- STYLES -->
+    <style type="text/css">
+      /* /\/\/\/\/\/\/\/\/ RESET STYLES /\/\/\/\/\/\/\/\/ */
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      img {
+        border: 0 none;
+        height: auto;
+        line-height: 100%;
+        outline: none;
+        text-decoration: none;
+      }
+
+      a img {
+        border: 0 none;
+      }
+
+      .imageFix {
+        display: block;
+      }
+
+      table,
+      td {
+        border-collapse: collapse;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p,
+      i,
+      b,
+      a,
+      ul,
+      li,
+      blockquote,
+      hr,
+      img,
+      div,
+      span,
+      strong {
+        line-height: 1.2;
+        margin: 0;
+        padding: 0;
+      }
+
+
+  @font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFVZ0bf8pkAg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}      /* @import url('https://fonts.googleapis.com/css?family=Lato:300&display=swap'); */
+
+      /* to allow the transition to mobile to be graceful
+       I have added a media break point for tablet like devices as well */
+      @media only screen and (max-width: 660px) {
+        .container {
+          width: 480px !important;
+        }
+
+        .header {
+          width: 100% !important;
+          height: 150px !important;
+          background: linear-gradient(
+            180deg,
+            rgb(74, 76, 79) 67%,
+            rgba(116, 100, 57, 1) 89%,
+            rgba(163, 131, 48, 1) 99%
+          ) !important;
+        }
+
+        .logo {
+            background-color: #c7c7c7;
+        }
+
+        .banner img {
+          width: 480px;
+        }
+
+        .promo_1 {
+          width: 100% !important;
+        }
+
+        .promo_2 {
+          width: 100% !important;
+          padding-left: 0 !important;
+        }
+
+        /* .promo_2 img {
+          
+        } */
+        .promo_2_left {
+          padding-left: 0 !important;
+        }
+
+        .promo_1 td {
+          width: 100% !important;
+        }
+
+        .promo_2 td {
+          width: 100% !important;
+        }
+
+        .callout_1 {
+          width: 33.3% !important;
+        }
+
+        .callout_2 {
+          width: 33.3% !important;
+        }
+
+        .callout_3 {
+          width: 33.3% !important;
+        }
+
+        .callout_1 td {
+          width: 33.3% !important;
+        }
+
+        .callout_2 td {
+          width: 33.3% !important;
+        }
+
+        .callout_3 td {
+          width: 33.3% !important;
+        }
+      }
+      /* Mobile media queries */
+      @media only screen and (max-width: 510px) {
+        .container {
+          width: 100% !important;
+        }
+
+        .header img {
+          display: none !important;
+        }
+
+        .header {
+          width: 100% !important;
+          height: 150px !important;
+          background: linear-gradient(
+            180deg,
+            rgb(74, 76, 79) 67%,
+            rgba(116, 100, 57, 1) 89%,
+            rgba(163, 131, 48, 1) 99%
+          );
+        }
+
+        .logo {
+         background-color: #c7c7c7
+        }
+        .banner {
+          height: 250px;
+          background: url(images/image_small.jpg) no-repeat center 0px;
+          background-size: cover;
+        }
+        .banner img {
+          display: none;
+        }
+
+        .callout_1 {
+          width: 100% !important;
+        }
+
+        .callout_2 {
+          width: 100% !important;
+        }
+
+        .callout_3 {
+          width: 100% !important;
+        }
+
+        .callout_1 td {
+          width: 100% !important;
+          height: 180px !important;
+        }
+
+        table.callout_2 td {
+          width: 100% !important;
+          height: 180px !important;
+        }
+
+        table.callout_3 td {
+          width: 100% !important;
+          height: 180px !important;
+        }
+      }
+    </style>
+  </head>
+
+  <body bgcolor="#ffffff" style="padding: 0; margin: 0;">
+    <!-- full screen width table-->
+    <table
+      width="100%"
+      border="0"
+      cellspacing="0"
+      bgcolor="#ffffff"
+      style="border-collapse:collapse;"
+    >
+      <tr>
+        <td>
+          <!-- container table-->
+          <table
+            class="container"
+            width="640"
+            align="center"
+            border="0"
+            cellpadding="0"
+            style="border-collapse:collapse;"
+          >
+            <tr>
+              <!-- this is for header/logo content  -->
+
+              <!-- If the css gradient doesn't work in media queries the bgcolor attribute will appear -->
+
+              <!-- HERE THE LINEAR GRADIENT CSS WILL NOT WORK IN OUTLOOK + SOME OTHER
+                                    EMAIL CLIENTS - the 'bgcolor' value will be used as a back up default -->
+              <td
+                valign="top"
+                bgcolor="#c7c7c7"
+                class="logo"
+                style="padding: 5px 30px; background-color:#eaeaea;"
+              >
+                <a href="#" style="text-decoration: none; border: 0;"
+                  ><img
+                    src="./images/logo2.png"
+                    alt="singletrack"
+                    width="150"
+                    height="66"
+                    border="0"
+                /></a>
+              </td>
+            </tr>
+            <tr>
+              <td valign="top" bgcolor="#ffffff" class="banner">
+                <img
+                  src="images/image.jpg"
+                  width="640"
+                  height="180"
+                  alt="Our Vineyard"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td
+                valign="top"
+                bgcolor="#ffffff"
+                valign="top"
+                class="content"
+                style="padding: 20px 30px 2px 30px; font-family: Helvetica, Arial sans-serif; font-size: 18px; line-height:33px; color: #464646;"
+              >
+                <h1>Ationem sint et. Porro culpa quas blanditiis aut!</h1>
+              </td>
+            </tr>
+          
+            <tr>
+              <td
+                valign="top"
+                bgcolor="#ffffff"
+                valign="top"
+                class="content fallback-font"
+                style="padding: 10px 30px 10px 30px; line-height: 1.3; font-family:'Open Sans', Helvetica,Arial, sans-serif; font-size: 18px; line-height:22px; color: #2b2b2b;"
+              >
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
+                  ipsa velit temporibus tempore, voluptates doloremque atque
+                  quis perferendis magnam est nihil expedita exercitationem sint
+                  et. Porro culpa quas blanditiis aut!
+                </p>
+                <!-- button -->
+                <table
+                  width="160"
+                  class="button"
+                  align="left"
+                  style="margin: 20px 0px 10px 0px;"
+                >
+                  <tr>
+                    <td
+                    style="text-align: center;  background-color: #ffffff; padding: 10px 15px; border: 1px solid #001489;"
+                  >
+                      <a
+                        href="#"
+                        style="color: #1a1a1a; font-size: 16px; letter-spacing: 1px; text-decoration: none; font-family: Arial, Helvetica, sans-serif;"
+                        >Learn more</a
+                      >
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <!-- beginning of 'promos' row -->
+            <tr>
+              <td
+                valign="top"
+                bgcolor="#ffffff"
+                class="promos"
+                style="padding: 0px 30px 0px 30px; 
+                background-color: #ffffff; 
+                font-family:'Open Sans', Helvetica,Arial, sans-serif; 
+                font-size: 18px; line-height:22px; color: #2b2b2b;"
+              >
+             
+                <table
+                  class="promo_1"
+                  align="left"
+                  border="0"
+                  style="border-collapse:collapse;"
+                  width="280"
+                >
+                
+                  <tr>
+                    <td
+                      bgcolor="#ffffff"
+                      valign="top"
+                      width="280"
+                      
+                      style="font-family:'Open Sans', Helvetica,Arial, sans-serif; font-size: 18px; padding-right: 10px; padding-bottom: 15px;"
+                
+                    >
+                    <img src="images/dance.jpg" alt="dance" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      valign="top"
+                      bgcolor="#ffffff"
+                      valign="top"
+                      class="content fallback-font"
+                      style="padding-right: 10px; padding-bottom: 15px; font-family: Helvetica,Arial, sans-serif; font-size: 20px; line-height:22px; color: #2b2b2b;"
+                    >
+                    <h2>Lorem ipsum dolor sit</h2>
+                    </td>
+                  </tr>
+
+                    <tr>
+                      <td
+                        bgcolor="#ffffff"
+                        valign="top"
+                        width="280"
+                        style="padding-right: 10px; padding-bottom: 15px;
+                        line-height: 1.3; font-family:'Open Sans', Helvetica,Arial, sans-serif; font-size: 18px;"
+                      >
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
+                      ipsa velit temporibus tempore, voluptates doloremque atque
+                      quis perferendis magnam est nihil expedita exercitationem sint
+                      et. Porro culpa quas blanditiis aut!
+                    </p>
+                    <table
+                    width="160"
+                    class="button"
+                    align="left"
+                    style="margin: 20px 0px 10px 0px;"
+                  >
+                    <tr>
+                      <td
+                        style="text-align: center;  background-color: #ffffff; padding: 10px 15px; border: 1px solid #001489;""
+                      >
+                        <a
+                          href="#"
+                          style="color: #1a1a1a; text-decoration: none; font-size: 16px; letter-spacing: 1px; text-decoration: none; font-family: Arial, Helvetica, sans-serif;"
+                          >Learn more</a
+                        >
+                      </td>
+                    </tr>
+                  </table>
+                  
+                  
+                  </td>
+                  </tr>
+                </table>
+
+                <table
+                  class="promo_2"
+                  width="280"
+               
+                  align="right"
+                  border="0"
+                  style="border-collapse:collapse;"
+                >
+                  <tr>
+                    <td
+                      bgcolor="#ffffff"
+                      valign="top"
+                      width="280"
+                      style="padding-left: 10px;
+                      padding-bottom: 15px;"
+                    class="promo_2_left">
+                    <img src="images/dance.jpg" alt="dance" />
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    valign="top"
+                    bgcolor="#ffffff"
+                    valign="top"
+                    class="content fallback-font promo_2_left"
+                    style="padding-left: 10px; padding-bottom: 15px; font-family: Helvetica,Arial, sans-serif; font-size: 20px; line-height:22px; color: #2b2b2b;"
+                  >
+                  <h2>Lorem ipsum dolor sit</h2>
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    bgcolor="#ffffff"
+                    valign="top"
+                    width="280"
+                    style="padding-left: 10px; padding-bottom: 15px;
+                    line-height: 1.3; font-family:'Open Sans', Helvetica,Arial, sans-serif; font-size: 18px;"
+                    class="promo_2_left"
+                  >
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
+                      ipsa velit temporibus tempore, voluptates doloremque atque
+                      quis perferendis magnam est nihil expedita exercitationem sint
+                      et. Porro culpa quas blanditiis aut!
+                    </p>
+                    <table
+                    width="160"
+                    class="button"
+                    align="left"
+                    style="margin: 20px 0px 10px 0px; 
+                    "
+                  >
+                    <tr>
+                      <td
+                        style="text-align: center;  background-color: #ffffff; padding: 10px 15px; border: 1px solid #001489;"
+                      >
+                        <a
+                          href="#"
+                          style="color: #1a1a1a; font-size: 16px; letter-spacing: 1px; text-decoration: none; font-family: Arial, Helvetica, sans-serif;"
+                          >Learn more</a
+                        >
+                      </td>
+                    </tr>
+                  </table>
+             
+                  
+                  
+                  
+                  </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <!-- beginning of 'callouts' row -->
+            <tr>
+              <td
+                valign="top"
+                bgcolor="#ffffff"
+                class="callout"
+                style=" padding: 0 30px 90px 30px; background-color: #fff; "
+              >
+                <table
+                  class="callout_1"
+                  width="580"
+                  align="center"
+                  border="0"
+                  cellspacing="0"
+                  cellpadding="0"
+                  style="border-collapse:collapse;"
+                >
+                  <tr>
+                    <td
+                      bgcolor="#ffffff"
+                      valign="top"
+                     
+              
+                    >
+                <table
+                    valign="top"
+                     width="194"
+                    cellspacing="0"
+                    cellpadding="0"
+                    align="left"
+                    style="border-collapse:collapse;">
+                      <tr>
+                        <td>
+                    <img src="images/actor.png" />
+                  </td>
+                  </tr>
+               </table>
+                 
+                <table valign="top"
+                cellspacing="0"
+                cellpadding="0"
+                width="370" style="border-collapse: collapse;" align="right">
+
+                <tr>
+                    <td valign="top" style="padding-left: 10px; padding-bottom: 15px;
+                    line-height: 1.3; font-family: Helvetica,Arial, sans-serif; font-size: 18px;">
+                      <h1>
+                        Lorem ipsum dolor sit
+                      </h1>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" style="padding-left: 10px; padding-bottom: 15px;
+                    line-height: 1.3; font-family:'Open Sans', Helvetica,Arial, sans-serif; font-size: 18px;">
+                      <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem, quas vel accusamus dicta molestiae sit hic at neque alias omnis officiis fugit! Perferendis sit perspiciatis, unde vero commodi debitis iste!
+                      </p>
+                    </td>
+                  </tr>
+
+                </table>
+                  </td>
+                  </tr>
+                </table>
+
+               
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
