@@ -82,10 +82,7 @@
       /* to allow the transition to mobile to be graceful
        I have added a media break point for tablet like devices as well */
       @media only screen and (max-width: 660px) {
-
-        td p {
-          font-size: 19px !important;
-        }
+       
         .container {
           width: 480px !important;
         }
@@ -150,6 +147,15 @@
       }
       /* Mobile media queries */
       @media only screen and (max-width: 510px) {
+        p {
+          font-size: 25px !important;
+        }
+        a {
+          font-size: 25px !important;
+        }
+        .button {
+          width: 250px !important;
+        }
         .container {
           width: 100% !important;
         }
@@ -227,11 +233,6 @@
           >
             <tr>
               <!-- this is for header/logo content  -->
-
-              <!-- If the css gradient doesn't work in media queries the bgcolor attribute will appear -->
-
-              <!-- HERE THE LINEAR GRADIENT CSS WILL NOT WORK IN OUTLOOK + SOME OTHER
-                                    EMAIL CLIENTS - the 'bgcolor' value will be used as a back up default -->
               <td
                 valign="top"
                 bgcolor="#c7c7c7"
@@ -251,12 +252,7 @@
             </tr>
             <tr>
               <td valign="top" bgcolor="#ffffff" class="banner">
-                <img
-                  src="images/image.jpg"
-                  width="640"
-                  height="180"
-                  alt="Our Vineyard"
-                />
+                <img src="images/image.jpg" width="640" height="180" />
               </td>
             </tr>
             <tr>
@@ -267,6 +263,7 @@
                 class="content fallback-font"
                 style="padding: 5px 30px 5px 30px;"
               >
+              <!-- intro text 'on this week'-->
                 <table width="280" class="intro-highlight" align="left">
                   <tr>
                     <td
@@ -282,8 +279,10 @@
                     </td>
                   </tr>
                 </table>
+                <!-- end -->
               </td>
             </tr>
+            <!-- h1 heading -->
             <tr>
               <td
                 valign="top"
@@ -296,7 +295,7 @@
                 <h1>Ationem sint et. Porro culpa quas blanditiis aut!</h1>
               </td>
             </tr>
-
+            <!-- p intro -->
             <tr>
               <td
                 valign="top"
@@ -347,6 +346,7 @@
                 font-family:'Roboto', Helvetica,Arial, sans-serif; 
                 font-size: 16px; line-height:1.35; color: #464646;"
               >
+              <!-- promo 1 -->
                 <table
                   class="promo_1"
                   align="left"
@@ -420,7 +420,7 @@
                     </td>
                   </tr>
                 </table>
-
+                  <!-- promo 2 -->
                 <table
                   class="promo_2"
                   width="280"
@@ -535,14 +535,14 @@
                         cellspacing="0"
                         cellpadding="0"
                         width="370"
-                        style="border-collapse: collapse;"
+                        style="border-collapse: collapse; padding: 10px 10px 40px 40px;"
                         align="left"
                       >
                         <tr>
                           <td
                             class="bottom-promo"
                             valign="top"
-                            style="padding-left: 40px; padding-bottom: 15px;
+                            style=" padding-left: 40px; padding-top: 10px; padding-bottom: 25px;
                     line-height: 1.35; font-family: Helvetica,Arial, sans-serif; color: #464646;"
                           >
                             <h2>
@@ -574,6 +574,7 @@
                 </table>
               </td>
             </tr>
+            <!-- footer -->
             <tr>
               <td
                 class="footer fallback-font"
@@ -630,6 +631,7 @@
           </table>
         </td>
       </tr>
+      <!-- end body table -->
     </table>
   </body>
 </html>
